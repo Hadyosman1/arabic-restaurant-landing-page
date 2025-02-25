@@ -8,9 +8,24 @@ export default {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+        },
+        screens: {
+          xl: "1180px",
+        },
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: "hsl(var(--primary))",
+        brown: "hsl(var(--brown))",
+        "muted-brown": "hsl(var(--muted-brown))",
+        secondary: "hsl(var(--secondary))",
+        "muted-secondary": "hsl(var(--muted-secondary))",
+        "light-green": "hsl(var(--light-green))",
       },
     },
   },
