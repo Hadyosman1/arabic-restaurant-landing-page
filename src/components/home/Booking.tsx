@@ -22,7 +22,7 @@ const Booking = () => {
               <p>إس إس: 09 صباحا -11 مساء</p>
             </div>
           </div>
-          <Button className="justify-center bg-foreground !px-10 !py-2.5 text-xl font-semibold text-primary hover:scale-105 hover:bg-foreground/75 max-md:w-full">
+          <Button className="justify-center !bg-foreground !px-10 !py-2.5 text-xl font-semibold text-primary hover:scale-105 hover:!bg-foreground/75 max-md:w-full">
             احجز طاولة
           </Button>
         </div>

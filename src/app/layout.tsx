@@ -3,6 +3,7 @@ import { Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const notoSansArabic = Noto_Sans_Arabic({
   variable: "--font-noto-sans-arabic",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${notoSansArabic.className} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
