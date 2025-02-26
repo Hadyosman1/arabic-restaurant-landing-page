@@ -6,7 +6,7 @@ import productPic3 from "@/../public/product-3.png";
 import clsx from "clsx";
 import { ArrowLeft, ArrowRight, StarIcon } from "lucide-react";
 import Image from "next/image";
-import { MouseEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const products = {
   ساشيميس: [
