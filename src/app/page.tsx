@@ -2,6 +2,7 @@ import About from "@/components/home/About";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
+import Kora from "@/components/home/Kora";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Features />
       <About />
       <FeaturedProducts />
+      <Kora />
     </main>
   );
 }

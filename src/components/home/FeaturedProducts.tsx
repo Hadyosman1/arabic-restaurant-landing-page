@@ -11,18 +11,18 @@ import { MouseEvent, useRef, useState } from "react";
 const products = {
   ساشيميس: [
     {
-      id: 1,
-      name: "ساموراي الخاص",
-      price: 100,
-      image: productPic1,
-      rate: 4.9,
-      pax: "1:3",
-    },
-    {
       id: 2,
       name: "ساموراي الخاص",
       price: 100,
       image: productPic2,
+      rate: 4.9,
+      pax: "1:3",
+    },
+    {
+      id: 1,
+      name: "ساموراي الخاص",
+      price: 100,
+      image: productPic1,
       rate: 4.9,
       pax: "1:3",
     },
@@ -89,14 +89,6 @@ const products = {
   ],
   "استخدم فقط": [
     {
-      id: 1,
-      name: "ساموراي الخاص",
-      price: 100,
-      image: productPic1,
-      rate: 4.9,
-      pax: "1:3",
-    },
-    {
       id: 2,
       name: "ساموراي الخاص",
       price: 100,
@@ -109,6 +101,14 @@ const products = {
       name: "ساموراي الخاص",
       price: 100,
       image: productPic3,
+      rate: 4.9,
+      pax: "1:3",
+    },
+    {
+      id: 1,
+      name: "ساموراي الخاص",
+      price: 100,
+      image: productPic1,
       rate: 4.9,
       pax: "1:3",
     },
@@ -123,18 +123,18 @@ const products = {
       pax: "1:3",
     },
     {
-      id: 2,
-      name: "ساموراي الخاص",
-      price: 100,
-      image: productPic2,
-      rate: 4.9,
-      pax: "1:3",
-    },
-    {
       id: 3,
       name: "ساموراي الخاص",
       price: 100,
       image: productPic3,
+      rate: 4.9,
+      pax: "1:3",
+    },
+    {
+      id: 2,
+      name: "ساموراي الخاص",
+      price: 100,
+      image: productPic2,
       rate: 4.9,
       pax: "1:3",
     },
@@ -143,20 +143,20 @@ const products = {
 
 const FeaturedProducts = () => {
   const [selectedCategory, setSelectedCategory] =
-    useState<keyof typeof products>("طبق العائلة");
+    useState<keyof typeof products>("ساشيميس");
 
   const productContainerRef = useRef<HTMLDivElement>(null);
 
   const handleNextProduct = () => {
     productContainerRef.current?.scrollBy({
-      left: -(productContainerRef.current.offsetWidth || 185),
+      left: -185,
       behavior: "smooth",
     });
   };
 
   const handlePreviousProduct = () => {
     productContainerRef.current?.scrollBy({
-      left: productContainerRef.current.offsetWidth || 185,
+      left: 185,
       behavior: "smooth",
     });
   };
@@ -194,9 +194,9 @@ const FeaturedProducts = () => {
           <div className="flex snap-x snap-mandatory items-center justify-between gap-6 p-4 max-md:overflow-x-auto max-sm:px-5 md:col-span-3 md:flex-col md:items-start lg:col-span-2">
             {Object.keys(products).map((category) => (
               <button
-                onClick={() => {
-                  setSelectedCategory(category as keyof typeof products);
-                }}
+                onClick={() =>
+                  setSelectedCategory(category as keyof typeof products)
+                }
                 className={clsx(
                   "shrink-0 snap-center text-lg font-semibold text-muted-brown transition-all",
                   {
@@ -213,13 +213,14 @@ const FeaturedProducts = () => {
           </div>
 
           <div
+            key={selectedCategory}
             ref={productContainerRef}
-            className="flex snap-x snap-mandatory flex-wrap gap-8 overflow-x-hidden py-4 max-sm:mt-4 max-sm:justify-center sm:flex-nowrap sm:justify-normal sm:max-md:overflow-x-auto sm:max-md:px-8 md:col-span-6 lg:col-span-7"
+            className="flex snap-x snap-mandatory flex-wrap gap-8 overflow-x-hidden py-4 [scrollbar-width:none] max-sm:mt-4 max-sm:justify-center sm:flex-nowrap sm:justify-normal sm:max-md:overflow-x-auto sm:max-md:px-8 md:col-span-6 lg:col-span-7"
           >
             {products[selectedCategory].map((product) => (
               <div
                 className="shrink snap-center space-y-5 rounded-2xl bg-muted-secondary p-5 odd:bg-light-green sm:shrink-0 sm:p-8"
-                key={product.id}
+                key={`${selectedCategory}-${product.id}`}
               >
                 <Image
                   src={product.image}
@@ -238,7 +239,7 @@ const FeaturedProducts = () => {
                 </p>
 
                 <div>
-                  <div className="flex pt-3 text-xl font-bold *:grow md:text-3xl">
+                  <div className="flex pt-3 text-xl font-bold *:grow md:text-2xl">
                     <div className="flex flex-col items-center gap-2 text-center">
                       <StarIcon className="fill-foreground" />
                       <p>{product.rate}</p>

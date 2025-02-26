@@ -7,7 +7,7 @@
   --foreground: 0 0% 9%;
   --primary: 20 95% 81%;
   --brown: 20 21% 34%;
-  --muted-brown: 20 95% 81% 0.1;
+  --muted-brown: 20 21% 34%;
   --secondary: 20 16% 84%;
   --muted-secondary: 54 16% 84%;
   --light-green: 100 16% 84%;
@@ -15,6 +15,7 @@
 
 html {
   @apply scroll-smooth;
+  scrollbar-color: hsl(var(--light-green)) hsl(var(--muted-secondary) / 0.3);
 }
 
 body {
