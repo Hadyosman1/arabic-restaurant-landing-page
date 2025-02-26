@@ -9,7 +9,7 @@ import clsx from "clsx";
 const navLinks = [
   { label: "الرئيسية", href: "/" },
   { label: "قائمة هذا الشهر", href: "#featured-products" },
-  { label: "الحجز", href: "#" },
+  { label: "الحجز", href: "#booking" },
 ];
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

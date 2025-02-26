@@ -1,4 +1,5 @@
 import About from "@/components/home/About";
+import Booking from "@/components/home/Booking";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <FeaturedProducts />
       <Kora />
+      <Booking />
     </main>
   );
 }
