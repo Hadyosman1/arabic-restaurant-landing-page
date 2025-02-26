@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 const navLinks = [
   { label: "الرئيسية", href: "/" },
-  { label: "قائمة هذا الشهر", href: "#" },
+  { label: "قائمة هذا الشهر", href: "#featured-products" },
   { label: "الحجز", href: "#" },
 ];
 const Header = () => {
@@ -47,7 +47,7 @@ const Header = () => {
 
         <div
           className={clsx(
-            "fixed inset-0 bg-secondary p-4 transition-all duration-200 z-30",
+            "fixed inset-0 z-30 bg-secondary p-4 transition-all duration-200",
             showMenu ? "translate-x-0" : "-translate-x-full",
           )}
         >
@@ -59,6 +59,7 @@ const Header = () => {
           <nav className="flex flex-col items-center gap-4 py-4">
             {navLinks.map(({ href, label }) => (
               <Link
+                onClick={() => setShowMenu(false)}
                 key={label}
                 href={href}
                 className="text-muted-brown transition-colors hover:text-primary"
@@ -66,7 +67,7 @@ const Header = () => {
                 {label}
               </Link>
             ))}
-            <Button>الاتصال</Button>
+            <Button onClick={() => setShowMenu(false)}>الاتصال</Button>
           </nav>
         </div>
       </div>

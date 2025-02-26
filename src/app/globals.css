@@ -13,6 +13,10 @@
   --light-green: 100 16% 84%;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
