@@ -1,9 +1,11 @@
+import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden min-h-svh">
+    <main className="min-h-svh overflow-hidden">
       <Hero />
+      <Features />
     </main>
   );
 }

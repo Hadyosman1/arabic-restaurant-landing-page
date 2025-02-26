@@ -16,6 +16,7 @@ const Hero = () => {
           alt="hero meal"
           width={155}
           height={155}
+          priority
         />
         <div className="relative basis-3/5 space-y-8 sm:basis-1/2 md:space-y-14">
           <div className="absolute right-0 z-[-3] aspect-square w-full translate-x-1/2 rounded-full bg-primary lg:translate-x-[65%]" />
@@ -36,20 +37,22 @@ const Hero = () => {
           <div className="absolute left-0 z-[-1] aspect-square w-[60vw] -translate-x-1/2 rounded-full bg-primary opacity-20 blur-md lg:w-full lg:-translate-x-[65%]" />
         </div>
       </div>
-      <div className="absolute -top-16 left-0 z-[-1] w-3/5 sm:w-1/2 xl:-left-52 xl:-top-28">
+      <div className="absolute -top-16 left-0 z-[-1] w-3/5 sm:w-1/2 lg:-left-32 xl:-left-52 xl:-top-28">
         <Image
           src={heroSushiPic1}
           alt="hero sushi 1"
           width={560}
           height={375}
           className="max-sm:translate-y-20"
+          priority
         />
         <Image
           src={heroSushiPic2}
           alt="hero sushi 2"
           width={460}
           height={375}
-          className="sm:-translate-x-[30%] sm:-translate-y-[60%] md:-translate-y-[50%]"
+          className="max-sm:-translate-y-[25%] sm:-translate-x-[30%] sm:-translate-y-[60%] md:-translate-y-[50%]"
+          priority
         />
       </div>
     </section>
