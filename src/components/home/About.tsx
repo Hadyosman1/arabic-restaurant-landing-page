@@ -17,7 +17,7 @@ const About = () => {
         <div className="shrink grow">
           <Image src={aboutPic} alt="about" />
         </div>
-        <div className="grow space-y-16 md:basis-3/5">
+        <div className="shrink-0 grow space-y-16 md:basis-2/5">
           <h2 className="text-3xl font-bold md:text-6xl">حول المذاق الآسيوي</h2>
           <div className="space-y-10 text-balance text-muted-brown">
             <p>

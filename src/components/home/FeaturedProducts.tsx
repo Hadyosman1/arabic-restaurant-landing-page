@@ -1,12 +1,14 @@
 "use client";
 
+import { useRef, useState } from "react";
+import Image from "next/image";
+import clsx from "clsx";
+
+import { ArrowLeft, ArrowRight, StarIcon } from "lucide-react";
+
 import productPic1 from "@/../public/product-1.png";
 import productPic2 from "@/../public/product-2.png";
 import productPic3 from "@/../public/product-3.png";
-import clsx from "clsx";
-import { ArrowLeft, ArrowRight, StarIcon } from "lucide-react";
-import Image from "next/image";
-import { useRef, useState } from "react";
 
 const products = {
   ساشيميس: [

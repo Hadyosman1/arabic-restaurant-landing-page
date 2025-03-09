@@ -4,8 +4,8 @@ import Button from "../ui/Button";
 
 const Booking = () => {
   return (
-    <section id="booking">
-      <div className="container flex items-center gap-10 bg-primary/10 py-14 max-md:flex-wrap">
+    <section id="booking" className="bg-primary/10">
+      <div className="container flex items-center gap-10 py-14 max-md:flex-wrap">
         <div className="basis-full space-y-8 text-balance md:basis-1/2 md:space-y-16">
           <h2 className="text-4xl font-bold md:text-6xl">احجز جدولك الآن</h2>
           <p className="text-muted-brown">
@@ -13,7 +13,7 @@ const Booking = () => {
             سهلة على نفسك والتقط طبق سوشي لإطعام الأسرة.
           </p>
 
-          <Image src={bookingPic} alt="booking" className="md:hidden w-full" />
+          <Image src={bookingPic} alt="booking" className="w-full md:hidden" />
 
           <div className="space-y-1.5">
             <h3 className="text-lg font-semibold">ساعات العمل</h3>
